@@ -21,7 +21,7 @@
         "aws_bastion_priv_key_file": "",
 
         "vb_source_path": "The source OVF image to build upon",
-        "vb_source_path": "output/virtualbox-default/virtualbox-default.ovf",
+        "vb_source_path": "packer/output/virtualbox-default/virtualbox-default.ovf",
 
 
 
@@ -49,7 +49,7 @@
         "shutdown_command": "sudo -S shutdown -P now",
         "ssh_timeout": "10m",
         "headless": true,
-        "output_directory": "output/virtualbox-{{user `name`}}",
+        "output_directory": "packer/output/virtualbox-{{user `name`}}",
         "vm_name": "{{user `name`}}"
     }, {
         "type": "amazon-ebs",
@@ -83,7 +83,14 @@
                 "sudo sh -c 'echo {{user `name`}} > /etc/hostname'",
                 "sudo hostname -F /etc/hostname",
                 "sudo apt-get update",
-                "sudo apt-get -y install curl"
+                "sudo apt-get -y install curl",
+                "sudo apt-get update",
+                "sudo apt-get -y install python python-pip python3-pip",
+                "sudo ln -s /usr/bin/python3 /usr/local/bin/python3",
+                "sudo ln -s /usr/bin/python3.5 /usr/local/bin/python3.5",
+                "sudo ln -s /usr/bin/pip3 /usr/local/bin/pip3",
+                "sudo ln -s /usr/local/lib/python3.5 /usr/local/lib/python3",
+                "sudo ln -s /usr/local/lib/python3.5/dist-packages /usr/local/lib/python3.5/site-packages"
             ]
         },
         {
@@ -93,7 +100,8 @@
             "local_state_tree": "../salt_stack/salt",
             "remote_state_tree": "/srv/salt",
             "local_pillar_roots": "../salt_stack/pillar",
-            "remote_pillar_roots": "/srv/pillar"
+            "remote_pillar_roots": "/srv/pillar",
+            "log_level": "debug"
         }
     ],
     "post-processors": [{

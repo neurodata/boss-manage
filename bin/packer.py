@@ -80,8 +80,11 @@ def locate_ami(aws_config):
                    ])
 
         images = response['Images']
-        images = [i for i in images if contains(i['Name'], ('hvm-ssd', '14.04', 'server'))]
+        images = [i for i in images if contains(i['Name'], ('hvm-ssd', '16.04', 'server'))]
         images.sort(key=lambda x: x["CreationDate"], reverse=True)
+        #for i in images:
+        #    print(i['Name'])
+        #sys.exit(0)
 
         if len(images) == 0:
             print("Error: could not locate base AMI, exiting ....")
@@ -154,7 +157,10 @@ if __name__ == '__main__':
     if not os.path.isdir(packer_logs):
         os.mkdir(packer_logs)
 
-    ami = locate_ami(credentials_config)
+    if args.only == "amazon-ebs":
+        ami = locate_ami(credentials_config)
+    else:
+        ami = ""
 
     cmd = """{packer} build
              {bastion} -var-file={credentials}

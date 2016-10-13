@@ -23,7 +23,7 @@ firstboot:
         - group: root
         - mode: 555
     cmd.run:
-        - name: update-rc.d bossutils-firstboot start 10 2 3 4 5 .
+        - name: update-rc.d bossutils-firstboot start 70 2 3 4 5 .
         - user: root
 
 # For VirtualBox builds, ensure this user exists.  This is the

@@ -7,33 +7,24 @@
 # Redirecting output to /dev/null is essential.  Salt hung when run
 # w/o redirecting output.
 
+# Need python-pip for Salt to be able to to pip installs
 python35:
   pkg.installed:
-    - pkgs:
-        - build-essential
-        - zlib1g-dev
-        - libssl-dev
-        - libsqlite3-dev
-        - curl
+        - pkgs:
+            - python-pip
+            - python3-pip
   cmd.run:
     - name: |
-        cd /tmp
-        JUSTVERSION="3.5.1"
-        VERSION="Python-"$JUSTVERSION
-        curl -O https://www.python.org/ftp/python/$JUSTVERSION/$VERSION.tgz
-        tar -zxvf $VERSION.tgz > /dev/null
-        cd $VERSION
-        sudo -H ./configure > /dev/null
-        sudo -H make > /dev/null
-        sudo -H make altinstall > /dev/null
-        cd /tmp
-        rm -rf $VERSION
-        rm $VERSION.tgz
-        cd /usr/local/bin
-        ln -s python3.5 python3
-        ln -s pip3.5 pip3
-        cd /usr/local/lib
-        ln -s python3.5 python3
+        echo nothing to do
+        #cd /usr/local/bin
+        #ln -s /usr/bin/python3 python3
+        #ln -s /usr/bin/python3.5 python3.5
+        #ln -s /usr/bin/pip3 pip3
+
+        #cd /usr/local/lib
+        #ln -s python3.5 python3
+        #cd python3.5
+        #ln -s dist-packages site-packages
     - cwd: /tmp
     - shell: /bin/bash
     - timeout: 600
