@@ -140,7 +140,7 @@ def create_config(session, domain, keypair=None, db_config={}):
     # Create the endpoint ASG, ELB, and RDS instance
     config.add_autoscale_group("Endpoint",
                                names.endpoint,
-                               aws.ami_lookup(session, "endpoint.boss"),
+                               aws.ami_lookup(session, "endpoint.neurodata"),
                                keypair,
                                subnets=az_subnets_lambda,
                                type_=const.ENDPOINT_TYPE,

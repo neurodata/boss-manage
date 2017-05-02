@@ -19,7 +19,7 @@ from .cloudformation import get_scenario
 # Region api is created in.  Later versions of boto3 should allow us to
 # extract this from the session variable.  Hard coding for now.
 REGION = 'us-east-1'
-INCOMING_SUBNET = "52.3.13.189/32"  # microns-bastion elastic IP
+INCOMING_SUBNET = "54.86.239.130/32"  # microns-bastion elastic IP
 
 PRODUCTION_MAILING_LIST = "ProductionMicronsMailingList"
 PRODUCTION_BILLING_TOPIC = "ProductionBillingList"
@@ -28,7 +28,7 @@ MAX_ALARM_DOLLAR = 30  # Maximum size of alarms in $1,000s
 
 ########################
 # Lambda Build Server
-PROD_LAMBDA_KEY = 'microns-bastion20151117'
+PROD_LAMBDA_KEY = 'jhubossroot'
 DEV_LAMBDA_KEY = 'microns-bastion20151117'
 
 
@@ -97,19 +97,19 @@ TIMEOUT_KEYCLOAK = 150
 ########################
 # Machine Instance Types
 ENDPOINT_TYPE = {
-    "development": "t2.medium",
+    "development": "m4.xlarge",
     "production": "m4.2xlarge",
     "ha-development": "t2.medium",
 }
 
 RDS_TYPE = {
-    "development": "db.t2.micro",
+    "development": "db.t2.small",
     "production": "db.t2.medium",
     "ha-development": "db.t2.micro",
 }
 
 REDIS_CACHE_TYPE = {
-    "development": "cache.t2.small",
+    "development": "cache.m4.2xlarge",
     "production": "cache.m4.10xlarge",
     "ha-development": "cache.t2.small",
 }

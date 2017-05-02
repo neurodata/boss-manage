@@ -52,7 +52,7 @@ Author:
 #          10.0.0.255: Network broadcast address. We do not support broadcast in a VPC, therefore we reserve this address.
 ##
 
-TLD = "boss"
+TLD = "neurodata"
 BASE_IP = "10.0.0.0"
 ROOT_CIDR = 8
 VPC_CIDR = 16 # make sure VPC_CIDR is greater than ROOT_CIDR
@@ -61,19 +61,15 @@ SUBNET_CIDR = 24 # make sure SUBNET_CIDR is greater than VPC_CIDR
 LAMBDA_SUBNETS = 16 # TODO merge with constants.py variable of the same name
 
 # DP TODO: Migrate to constants.py
-PROD_ACCOUNT = "451493790433"
-PROD_DOMAIN = "theboss.io"
-PROD_LAMBDA_BUCKET = "boss-lambda-prod-env"
-PROD_LAMBDA_SERVER = "54.210.116.141"
+PROD_ACCOUNT = "550078104811"
+PROD_DOMAIN = "bossdev.neurodata.io"
+PROD_LAMBDA_BUCKET = "bossdev-lambda-prod-env"
+PROD_LAMBDA_SERVER = "54.205.234.231"
 
-# Below is the old lambda server that targets Python 3.4 in the lambda
-# deployment package.
-#PROD_LAMBDA_SERVER = "52.55.121.6"
-
-DEV_ACCOUNT = "256215146792"
-DEV_DOMAIN = "thebossdev.io"
-DEV_LAMBDA_BUCKET = "boss-lambda-env"
-DEV_LAMBDA_SERVER = "52.23.27.39"
+DEV_ACCOUNT = "550078104811"
+DEV_DOMAIN = "bossdev.neurodata.io"
+DEV_LAMBDA_BUCKET = "bossdev-lambda-prod-env"
+DEV_LAMBDA_SERVER = "54.210.116.141"
 
 # Below is the old lambda server that targets Python 3.4 in the lambda
 # deployment package. 
@@ -122,7 +118,7 @@ for vpc in VPCS:
         SUBNETS[(vpc, subnet)] = subnets.index(subnet)
 
 # domains listed in this dictionary have certificates for the auth and api loadbalancers to use.
-BASE_DOMAIN_CERTS = {"production.boss": PROD_DOMAIN,
+BASE_DOMAIN_CERTS = {"production.neurodata": PROD_DOMAIN,
                       "integration.boss": "integration.{}".format(PROD_DOMAIN)}
 
 

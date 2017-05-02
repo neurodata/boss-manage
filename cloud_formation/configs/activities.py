@@ -88,7 +88,7 @@ def create_config(session, domain):
 
     config.add_autoscale_group("Activities",
                                names.activities,
-                               aws.ami_lookup(session, 'activities.boss'),
+                               aws.ami_lookup(session, 'activities.neurodata'),
                                keypair,
                                subnets=internal_subnets_lambda,
                                type_=const.ACTIVITIES_TYPE,
