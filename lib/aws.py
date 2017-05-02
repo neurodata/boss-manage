@@ -311,7 +311,7 @@ def ami_lookup(session, ami_name, version = None):
         return None
 
     specific = False
-    if ami_name.endswith(".boss"):
+    if ami_name.endswith(".neurodata"):
         ami_version = os.environ["AMI_VERSION"] if version is None else version
         if ami_version == "latest":
             # limit latest searching to only versions tagged with hash information

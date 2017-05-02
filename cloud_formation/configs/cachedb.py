@@ -130,7 +130,7 @@ def create_config(session, domain, keypair=None, user_data=None):
 
     config.add_ec2_instance("CacheManager",
                                 names.cache_manager,
-                                aws.ami_lookup(session, "cachemanager.boss"),
+                                aws.ami_lookup(session, "cachemanager.neurodata"),
                                 keypair,
                                 subnet=Ref("InternalSubnet"),
                                 public_ip=False,
