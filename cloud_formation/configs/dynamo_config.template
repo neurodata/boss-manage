@@ -1,0 +1,16 @@
+# Config template for the dynamodb autoscaling lambda.
+
+# Section name will be stripped out when generating the NodeJS config file.
+[default]
+
+# Slack integration variables.
+SLACK_WEBHOOK_HOST = "hooks.slack.com"
+SLACK_WEBHOOK_PATH_PRODUCTION = ""
+SLACK_WEBHOOK_PATH_DEV = ""
+
+# This wil be set to the value of SLACK_WEBHOOK_PATH_PRODUCTION or 
+# SLACK_WEBHOOK_PATH_DEV depending on the domain used for Cloud Formation.
+SLACK_WEBHOOK_PATH = ""
+
+# VPC domain will be dynamically updated during Cloud Formation.
+VPC_DOMAIN = ""
