@@ -58,7 +58,7 @@ import tempfile
 NDINGEST_SETTINGS_FOLDER = const.repo_path('salt_stack', 'salt', 'ndingest', 'files', 'ndingest.git', 'settings')
 
 # Template used for ndingest settings.ini generation.
-NDINGEST_SETTINGS_TEMPLATE = NDINGEST_SETTINGS_FOLDER + '/settings.ini.apl'
+NDINGEST_SETTINGS_TEMPLATE = NDINGEST_SETTINGS_FOLDER + '/settings.ini'
 
 def get_lambda_zip_name(domain):
     """Get name of zip file containing lambda.
