@@ -1,0 +1,4 @@
+#!/bin/bash
+
+export scalyr_readconfig_token=''
+export scalyr_writeconfig_token=''
