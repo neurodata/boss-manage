@@ -14,9 +14,9 @@
     },
     "AttachedManagedPolicies": [
       "arn:aws:iam::aws:policy/service-role/AWSQuickSightListIAM",
-      "arn:aws:iam::451493790433:policy/aplPopulateUploadQueue",
-      "arn:aws:iam::451493790433:policy/aplDeleteCuboid",
-      "arn:aws:iam::451493790433:policy/aplResolutionHierarchy",
+      "arn:aws:iam::550078104811:policy/aplPopulateUploadQueue",
+      "arn:aws:iam::550078104811:policy/aplDeleteCuboid",
+      "arn:aws:iam::550078104811:policy/aplResolutionHierarchy",
       "arn:aws:iam::aws:policy/AWSStepFunctionsFullAccess"
     ],
     "InstanceProfileList": [
@@ -307,7 +307,7 @@
       "Version": "2012-10-17"
     },
     "AttachedManagedPolicies": [
-      "arn:aws:iam::451493790433:policy/aplPopulateUploadQueue"
+      "arn:aws:iam::550078104811:policy/aplPopulateUploadQueue"
     ],
     "InstanceProfileList": [],
     "Path": "/",
@@ -554,8 +554,8 @@
       "Version": "2012-10-17"
     },
     "AttachedManagedPolicies": [
-      "arn:aws:iam::451493790433:policy/service-role/AWSLambdaS3ExecutionRole-2a0110ca-6e60-4f94-8510-fdaf9ddfb583",
-      "arn:aws:iam::451493790433:policy/service-role/AWSLambdaBasicExecutionRole-28085153-2e10-4740-8166-7090f779f1c7"
+      "arn:aws:iam::550078104811:policy/service-role/AWSLambdaS3ExecutionRole-2a0110ca-6e60-4f94-8510-fdaf9ddfb583",
+      "arn:aws:iam::550078104811:policy/service-role/AWSLambdaBasicExecutionRole-28085153-2e10-4740-8166-7090f779f1c7"
     ],
     "InstanceProfileList": [],
     "Path": "/service-role/",

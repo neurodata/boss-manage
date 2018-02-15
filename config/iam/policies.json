@@ -575,7 +575,7 @@
         {
           "Action": "logs:CreateLogGroup",
           "Effect": "Allow",
-          "Resource": "arn:aws:logs:us-east-1:451493790433:*"
+          "Resource": "arn:aws:logs:us-east-1:550078104811:*"
         },
         {
           "Action": [
@@ -584,7 +584,7 @@
           ],
           "Effect": "Allow",
           "Resource": [
-            "arn:aws:logs:us-east-1:451493790433:log-group:/aws/lambda/check:*"
+            "arn:aws:logs:us-east-1:550078104811:log-group:/aws/lambda/check:*"
           ]
         }
       ],
@@ -599,7 +599,7 @@
         {
           "Action": "logs:CreateLogGroup",
           "Effect": "Allow",
-          "Resource": "arn:aws:logs:us-east-1:451493790433:*"
+          "Resource": "arn:aws:logs:us-east-1:550078104811:*"
         },
         {
           "Action": [
@@ -608,7 +608,7 @@
           ],
           "Effect": "Allow",
           "Resource": [
-            "arn:aws:logs:us-east-1:451493790433:log-group:/aws/lambda/SnowballTest:*"
+            "arn:aws:logs:us-east-1:550078104811:log-group:/aws/lambda/SnowballTest:*"
           ]
         }
       ],
@@ -641,14 +641,14 @@
             "dynamodb:PutItem"
           ],
           "Effect": "Allow",
-          "Resource": "arn:aws:dynamodb:us-east-1:451493790433:table/*"
+          "Resource": "arn:aws:dynamodb:us-east-1:550078104811:table/*"
         },
         {
           "Action": [
             "lambda:InvokeFunction"
           ],
           "Effect": "Allow",
-          "Resource": "arn:aws:lambda:us-east-1:451493790433:function:*"
+          "Resource": "arn:aws:lambda:us-east-1:550078104811:function:*"
         }
       ],
       "Version": "2012-10-17"
@@ -672,7 +672,7 @@
             "ec2:DeleteNetworkInterface"
           ],
           "Effect": "Allow",
-          "Resource": "arn:aws:ec2:us-east-1:451493790433:network-interface/*"
+          "Resource": "arn:aws:ec2:us-east-1:550078104811:network-interface/*"
         }
       ],
       "Version": "2012-10-17"
