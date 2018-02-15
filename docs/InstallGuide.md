@@ -140,6 +140,23 @@ In Route53 create a new hosted zone for the theboss.io
 Change the Name Servers within your domain registrar to use the ones listed
 in the newly created hosted zone.
 
+## Scalyr Write API Key
+
+Before AMIs can be built, the Scalyr API key needs to be set in the Salt pillar.
+Log into https://scalyr.com and click on the account name in the upper right.
+Select API Keys from the dropdown.  Copy the `Write Logs` key to the clipboard.
+At the time of writing (20Oct2017), there are two `Write Logs` keys.  Use the
+bottom-most one.  The first one will be deleted, soon.
+
+In a text editor, create `boss-manage/salt-stack/pillar/scalyr.sls`:
+
+```
+#  Scalyr API Key - this file has secret data so isn't part of the repo
+scalyr:
+  log_key: <paste key here>
+```
+
+Paste the key from the clipboard so that it replaces `<paste key here>`
 
 ### Create AMIs
 Several AWS Images (AMIs) need to be created. These images are preconfigured for
