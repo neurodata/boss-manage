@@ -57,7 +57,7 @@
         "secret_key": "{{user `aws_secret_key`}}",
         "ssh_username": "ubuntu",
         "ami_name": "Using the '.boss' suffix to make sure our names are unique in AWS",
-        "ami_name": "{{user `name`}}.boss{{user `name_suffix`}}",
+        "ami_name": "{{user `name`}}.neurodata{{user `name_suffix`}}",
         "ami_description": "AMI configured for running as a / the {{user `role`}} server",
         "source_ami": "{{user `aws_source_ami`}}",
         "force_deregister": "{{user `aws_force`}}",

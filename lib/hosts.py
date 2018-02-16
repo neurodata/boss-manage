@@ -119,7 +119,7 @@ for vpc in VPCS:
 
 # domains listed in this dictionary have certificates for the auth and api loadbalancers to use.
 BASE_DOMAIN_CERTS = {"production.neurodata": PROD_DOMAIN,
-                      "integration.boss": "integration.{}".format(PROD_DOMAIN)}
+                      "integration.neurodata": "integration.{}".format(PROD_DOMAIN)}
 
 
 ##
