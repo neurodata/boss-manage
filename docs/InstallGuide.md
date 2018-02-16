@@ -282,7 +282,7 @@ The scripts make use of multiple environment variables to manage optional
 configuration elements. There are shell scripts that contain these environment
 variables that can be sourced before launching different scripts.
 
-1. Open `boss-manage.git/vault/set_keys.sh` in a text editor
+1. Open `boss-manage.git/config/set_keys.sh` in a text editor
 2. Update SSH_KEY to contain the location of the EC2 Keypair created
 3. Update the BASTION_KEY to contain the location of the private key of the SSH bastion host
 4. Update the BASTION_IP to contain the IP of the SSH bastion host
