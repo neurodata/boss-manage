@@ -31,7 +31,7 @@
   },
   {
     "AttachedManagedPolicies": [
-      "arn:aws:iam::550078104811:policy/aplInstanceOwnerPolicy"
+      "arn:aws:iam::950331671021:policy/aplInstanceOwnerPolicy"
     ],
     "GroupName": "aplInstanceOwnerGroup",
     "GroupPolicyList": [],
@@ -40,7 +40,7 @@
   {
     "AttachedManagedPolicies": [
       "arn:aws:iam::aws:policy/IAMFullAccess",
-      "arn:aws:iam::550078104811:policy/aplCloudFormationFullAccess",
+      "arn:aws:iam::950331671021:policy/aplCloudFormationFullAccess",
       "arn:aws:iam::aws:policy/CloudFrontFullAccess",
       "arn:aws:iam::aws:policy/AWSCloudTrailFullAccess",
       "arn:aws:iam::aws:policy/AmazonVPCFullAccess"
@@ -51,7 +51,7 @@
   },
   {
     "AttachedManagedPolicies": [
-      "arn:aws:iam::550078104811:policy/aplBillingGroupPolicy"
+      "arn:aws:iam::950331671021:policy/aplBillingGroupPolicy"
     ],
     "GroupName": "aplProjectManagerGroup",
     "GroupPolicyList": [],
@@ -69,7 +69,7 @@
   },
   {
     "AttachedManagedPolicies": [
-      "arn:aws:iam::550078104811:policy/aplCloudFormationFullAccess"
+      "arn:aws:iam::950331671021:policy/aplCloudFormationFullAccess"
     ],
     "GroupName": "aplSWDevGroup",
     "GroupPolicyList": [],

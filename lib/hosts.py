@@ -61,10 +61,10 @@ SUBNET_CIDR = 24 # make sure SUBNET_CIDR is greater than VPC_CIDR
 LAMBDA_SUBNETS = 16 # TODO merge with constants.py variable of the same name
 
 # DP TODO: Migrate to constants.py
-PROD_ACCOUNT = "550078104811"
-PROD_DOMAIN = "bossdev.neurodata.io"
-PROD_LAMBDA_BUCKET = "bossdev-lambda-prod-env"
-PROD_LAMBDA_SERVER = "34.234.86.77"
+PROD_ACCOUNT = "950331671021"
+PROD_DOMAIN = "boss.neurodata.io"
+PROD_LAMBDA_BUCKET = "boss-lambda-prod-env"
+PROD_LAMBDA_SERVER = "54.205.234.231"
 
 DEV_ACCOUNT = "550078104811"
 DEV_DOMAIN = "bossdev.neurodata.io"
