@@ -64,12 +64,12 @@ LAMBDA_SUBNETS = 16 # TODO merge with constants.py variable of the same name
 PROD_ACCOUNT = "550078104811"
 PROD_DOMAIN = "bossdev.neurodata.io"
 PROD_LAMBDA_BUCKET = "bossdev-lambda-prod-env"
-PROD_LAMBDA_SERVER = "54.205.234.231"
+PROD_LAMBDA_SERVER = "34.234.86.77"
 
 DEV_ACCOUNT = "550078104811"
 DEV_DOMAIN = "bossdev.neurodata.io"
 DEV_LAMBDA_BUCKET = "bossdev-lambda-prod-env"
-DEV_LAMBDA_SERVER = "54.210.116.141"
+DEV_LAMBDA_SERVER = "34.234.86.77"
 
 # Below is the old lambda server that targets Python 3.4 in the lambda
 # deployment package. 
@@ -119,7 +119,7 @@ for vpc in VPCS:
 
 # domains listed in this dictionary have certificates for the auth and api loadbalancers to use.
 BASE_DOMAIN_CERTS = {"production.neurodata": PROD_DOMAIN,
-                      "integration.neurodata": "integration.{}".format(PROD_DOMAIN)}
+                      "integration.neurodata": PROD_DOMAIN}
 
 
 ##

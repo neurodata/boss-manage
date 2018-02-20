@@ -28,8 +28,8 @@ MAX_ALARM_DOLLAR = 30  # Maximum size of alarms in $1,000s
 
 ########################
 # Lambda Build Server
-PROD_LAMBDA_KEY = 'jhubossroot'
-DEV_LAMBDA_KEY = 'microns-bastion20151117'
+PROD_LAMBDA_KEY = 'bossdev'
+DEV_LAMBDA_KEY = 'bossdev'
 
 
 ########################

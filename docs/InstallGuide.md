@@ -167,7 +167,7 @@ Make sure that the Packer executable is either in $PATH (you can call it by just
 calling packer) or in the `bin/` directory of the boss-manage repository.
 
 ```shell
-$ bin/packer.py auth vault endpoint proofreader-web consul cachemanager
+$ bin/packer.py auth vault endpoint proofreader-web consul cachemanager activities
 ```
 
 *Note: because the packer.py script is running builds in parallel it is redirecting
@@ -282,11 +282,11 @@ The scripts make use of multiple environment variables to manage optional
 configuration elements. There are shell scripts that contain these environment
 variables that can be sourced before launching different scripts.
 
-1. Open `boss-manage.git/config/set_keys.sh` in a text editor
+1. Open `boss-manage.git/config/set_vars.sh` in a text editor
 2. Update SSH_KEY to contain the location of the EC2 Keypair created
 3. Update the BASTION_KEY to contain the location of the private key of the SSH bastion host
 4. Update the BASTION_IP to contain the IP of the SSH bastion host
-5. Save `set_keys.sh` and close the text editor
+5. Save `set_vars.sh` and close the text editor
 ```shell
 $ cd boss-manage.git/bin/
 $ source ../config/set_vars.sh
