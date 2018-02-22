@@ -1,11 +1,11 @@
 [submodule "salt_stack/salt/boss-tools/files/boss-tools.git"]
 	path = salt_stack/salt/boss-tools/files/boss-tools.git
 	url = http://github.com/neurodata/boss-tools.git
-	branch = feb2018
+	branch = ndmaster
 [submodule "salt_stack/salt/boss/files/boss.git"]
 	path = salt_stack/salt/boss/files/boss.git
 	url = http://github.com/neurodata/boss.git
-	branch = feb2018
+	branch = ndmaster
 [submodule "salt_stack/salt/spdb/files/spdb.git"]
 	path = salt_stack/salt/spdb/files/spdb.git
 	url = http://github.com/jhuapl-boss/spdb.git
