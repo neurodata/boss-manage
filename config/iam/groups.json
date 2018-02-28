@@ -40,10 +40,10 @@
   {
     "AttachedManagedPolicies": [
       "arn:aws:iam::aws:policy/IAMFullAccess",
-      "arn:aws:iam::550078104811:policy/aplCloudFormationFullAccess",
       "arn:aws:iam::aws:policy/CloudFrontFullAccess",
       "arn:aws:iam::aws:policy/AWSCloudTrailFullAccess",
-      "arn:aws:iam::aws:policy/AmazonVPCFullAccess"
+      "arn:aws:iam::aws:policy/AmazonVPCFullAccess",
+      "arn:aws:iam::550078104811:policy/aplCloudFormationFullAccess"
     ],
     "GroupName": "aplNetworkGroup",
     "GroupPolicyList": [],

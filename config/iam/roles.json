@@ -14,9 +14,9 @@
     },
     "AttachedManagedPolicies": [
       "arn:aws:iam::aws:policy/service-role/AWSQuickSightListIAM",
-      "arn:aws:iam::550078104811:policy/aplPopulateUploadQueue",
-      "arn:aws:iam::550078104811:policy/aplDeleteCuboid",
       "arn:aws:iam::550078104811:policy/aplResolutionHierarchy",
+      "arn:aws:iam::550078104811:policy/aplDeleteCuboid",
+      "arn:aws:iam::550078104811:policy/aplPopulateUploadQueue",
       "arn:aws:iam::aws:policy/AWSStepFunctionsFullAccess"
     ],
     "InstanceProfileList": [
@@ -103,6 +103,69 @@
     "InstanceProfileList": [],
     "Path": "/service-role/",
     "RoleName": "AWSBatchServiceRole",
+    "RolePolicyList": []
+  },
+  {
+    "AssumeRolePolicyDocument": {
+      "Statement": [
+        {
+          "Action": "sts:AssumeRole",
+          "Effect": "Allow",
+          "Principal": {
+            "Service": "elasticache.amazonaws.com"
+          }
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "AttachedManagedPolicies": [
+      "arn:aws:iam::aws:policy/aws-service-role/ElastiCacheServiceRolePolicy"
+    ],
+    "InstanceProfileList": [],
+    "Path": "/aws-service-role/elasticache.amazonaws.com/",
+    "RoleName": "AWSServiceRoleForElastiCache",
+    "RolePolicyList": []
+  },
+  {
+    "AssumeRolePolicyDocument": {
+      "Statement": [
+        {
+          "Action": "sts:AssumeRole",
+          "Effect": "Allow",
+          "Principal": {
+            "Service": "organizations.amazonaws.com"
+          }
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "AttachedManagedPolicies": [
+      "arn:aws:iam::aws:policy/aws-service-role/AWSOrganizationsServiceTrustPolicy"
+    ],
+    "InstanceProfileList": [],
+    "Path": "/aws-service-role/organizations.amazonaws.com/",
+    "RoleName": "AWSServiceRoleForOrganizations",
+    "RolePolicyList": []
+  },
+  {
+    "AssumeRolePolicyDocument": {
+      "Statement": [
+        {
+          "Action": "sts:AssumeRole",
+          "Effect": "Allow",
+          "Principal": {
+            "Service": "rds.amazonaws.com"
+          }
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "AttachedManagedPolicies": [
+      "arn:aws:iam::aws:policy/aws-service-role/AmazonRDSServiceRolePolicy"
+    ],
+    "InstanceProfileList": [],
+    "Path": "/aws-service-role/rds.amazonaws.com/",
+    "RoleName": "AWSServiceRoleForRDS",
     "RolePolicyList": []
   },
   {
@@ -471,6 +534,39 @@
           "Action": "sts:AssumeRole",
           "Effect": "Allow",
           "Principal": {
+            "AWS": "arn:aws:iam::961643085657:root"
+          }
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "AttachedManagedPolicies": [],
+    "InstanceProfileList": [],
+    "Path": "/",
+    "RoleName": "OrganizationAccountAccessRole",
+    "RolePolicyList": [
+      {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": "*",
+              "Effect": "Allow",
+              "Resource": "*"
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "PolicyName": "AdministratorAccess"
+      }
+    ]
+  },
+  {
+    "AssumeRolePolicyDocument": {
+      "Statement": [
+        {
+          "Action": "sts:AssumeRole",
+          "Effect": "Allow",
+          "Principal": {
             "Service": "events.amazonaws.com"
           },
           "Sid": ""
@@ -554,8 +650,8 @@
       "Version": "2012-10-17"
     },
     "AttachedManagedPolicies": [
-      "arn:aws:iam::550078104811:policy/service-role/AWSLambdaS3ExecutionRole-2a0110ca-6e60-4f94-8510-fdaf9ddfb583",
-      "arn:aws:iam::550078104811:policy/service-role/AWSLambdaBasicExecutionRole-28085153-2e10-4740-8166-7090f779f1c7"
+      "arn:aws:iam::550078104811:policy/service-role/AWSLambdaBasicExecutionRole-28085153-2e10-4740-8166-7090f779f1c7",
+      "arn:aws:iam::550078104811:policy/service-role/AWSLambdaS3ExecutionRole-2a0110ca-6e60-4f94-8510-fdaf9ddfb583"
     ],
     "InstanceProfileList": [],
     "Path": "/service-role/",
