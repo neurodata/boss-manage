@@ -180,11 +180,11 @@ def update_config_file(config_str, domain):
     slack_host = parser.get('default', SLACK_WEBHOOK_HOST)
     slack_path_prod = parser.get('default', SLACK_WEBHOOK_PATH_PRODUCTION)
     slack_path_dev = parser.get('default', SLACK_WEBHOOK_PATH_DEV)
-    if domain == 'production.boss':
+    if domain.startswith('production.'):
         parser.set('default', SLACK_WEBHOOK_PATH, slack_path_prod)
     else:
         parser.set('default', SLACK_WEBHOOK_PATH, slack_path_dev)
-        if domain != 'integration.boss':
+        if not domain.startswith('integration.'):
             # Override normal autoscale parameters when deploying to a
             # developer stack.
             parser.set('default', DEV_STACK, '')
