@@ -63,8 +63,8 @@ LAMBDA_SUBNETS = 16 # TODO merge with constants.py variable of the same name
 # DP TODO: Migrate to constants.py
 PROD_ACCOUNT = "950331671021"
 PROD_DOMAIN = "boss.neurodata.io"
-PROD_LAMBDA_BUCKET = "boss-lambda-prod-env"
-PROD_LAMBDA_SERVER = "54.205.234.231"
+PROD_LAMBDA_BUCKET = "neurodata-lambda-prod-env"
+PROD_LAMBDA_SERVER = "54.165.164.96"
 
 DEV_ACCOUNT = "550078104811"
 DEV_DOMAIN = "bossdev.neurodata.io"
