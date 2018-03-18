@@ -20,6 +20,7 @@ from .cloudformation import get_scenario
 # extract this from the session variable.  Hard coding for now.
 REGION = 'us-east-1'
 INCOMING_SUBNET = "54.86.239.130/32"  # microns-bastion elastic IP
+#INCOMING_SUBNET = "0.0.0.0/0"  # microns-bastion elastic IP
 
 PRODUCTION_MAILING_LIST = "ProductionMicronsMailingList"
 PRODUCTION_BILLING_TOPIC = "ProductionBillingList"
@@ -109,14 +110,14 @@ RDS_TYPE = {
 }
 
 REDIS_CACHE_TYPE = {
-    "development": "cache.m4.2xlarge",
-    "production": "cache.m4.10xlarge",
+    "development": "cache.r4.xlarge",
+    "production": "cache.r4.4xlarge",
     "ha-development": "cache.t2.small",
 }
 
 REDIS_TYPE = {
     "development": "cache.t2.small",
-    "production": "cache.m4.xlarge",
+    "production": "cache.r4.large",
     "ha-development": "cache.t2.small",
 }
 
