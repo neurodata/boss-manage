@@ -167,23 +167,23 @@ def create_config(session, domain, keypair=None, db_config={}):
     config.add_autoscale_policy("EndpointScaleUp",
                                 Ref("Endpoint"),
                                 adjustments=[
-                                    (0.0, 10, 1),  # 12% - 22% Utilization add 1 instance
-                                    (10, None, 2)  # Above 22% Utilization add 2 instances
+                                    (0, 25, 1),  # 50% - 75%  Utilization add 1 instance
+                                    (25, None, 2)  # Above 75% Utilization add 2 instances
                                 ],
                                 alarms=[
-                                    ("CPUUtilization", "Maximum", "GreaterThanThreshold", "12")
+                                    ("CPUUtilization", "Maximum", "GreaterThanThreshold", "50")
                                 ],
                                 period=1)
 
     config.add_autoscale_policy("EndpointScaleDown",
                                 Ref("Endpoint"),
                                 adjustments=[
-                                    (None, 0.0, -1),   # Under 1.5% Utilization remove 1 instance
+                                    (None, 0.0, -1),   # Under 10% Utilization remove 1 instance
                                 ],
                                 alarms=[
-                                    ("CPUUtilization", "Average", "LessThanThreshold", "1.5")
+                                    ("CPUUtilization", "Average", "LessThanThreshold", "10")
                                 ],
-                                period=50)
+                                period=15)
 
     config.add_rds_db("EndpointDB",
                       names.endpoint_db,
