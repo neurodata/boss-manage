@@ -20,7 +20,7 @@
         branch = master
 [submodule "lib/heaviside.git"]
 	path = lib/heaviside.git
-	url = https://github.com/jhuapl-boss/heaviside.git
+	url = https://github.com/neurodata/heaviside.git
 	branch = master
 [submodule "cloud_formation/lambda/dynamodb-lambda-autoscale"]
 	path = cloud_formation/lambda/dynamodb-lambda-autoscale
