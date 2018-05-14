@@ -6,10 +6,10 @@
 	path = salt_stack/salt/boss/files/boss.git
 	url = https://github.com/neurodata/boss.git
 	branch = ndmaster
-[submodule "salt_stack/salt/spdb/files/spdb.git"]
+[submodule "salt_stack/salt/spdb/files/spdb-boss.git"]
 	path = salt_stack/salt/spdb/files/spdb.git
-	url = https://github.com/jhuapl-boss/spdb.git
-	branch = master	
+	url = https://github.com/neurodata/spdb-boss.git
+	branch = ndmaster	
 [submodule "salt_stack/salt/ndingest/files/ndingest.git"]
         path = salt_stack/salt/ndingest/files/ndingest.git
 	url = https://github.com/jhuapl-boss/ndingest.git
