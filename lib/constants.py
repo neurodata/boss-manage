@@ -111,13 +111,13 @@ RDS_TYPE = {
 
 REDIS_CACHE_TYPE = {
     "development": "cache.r4.xlarge",
-    "production": "cache.r4.4xlarge",
+    "production": "cache.r4.2xlarge",
     "ha-development": "cache.t2.small",
 }
 
 REDIS_TYPE = {
     "development": "cache.t2.small",
-    "production": "cache.r4.large",
+    "production": "cache.m4.large",
     "ha-development": "cache.t2.small",
 }
 
@@ -185,7 +185,7 @@ ENDPOINT_DB_CONFIG = {
 REDIS_RESERVED_MEMORY = {
     # Size in MB, should be 75% of total.
     "development": 387,
-    "production": 38500,
+    "production": 16500,
     "ha-development": 387,
 }
 
